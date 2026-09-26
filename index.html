@@ -9,35 +9,33 @@
     body {
       margin: 0;
       background: #111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       font-family: sans-serif;
     }
 
     model-viewer {
       width: 100vw;
-      height: 70vh;
+      height: 100vh;
     }
 
     #ar-btn {
-      margin-top: 20px;
-      padding: 16px 40px;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 16px 48px;
       font-size: 18px;
       background: #4f8ef7;
       color: white;
       border: none;
       border-radius: 50px;
       cursor: pointer;
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
 
   <model-viewer
-    id="mv"
     src="model.glb"
     ios-src="model.usdz"
     ar
