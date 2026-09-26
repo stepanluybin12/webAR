@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebAR – Практика 1</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 70vh;
+    }
+
+    #ar-btn {
+      margin-top: 20px;
+      padding: 16px 40px;
+      font-size: 18px;
+      background: #4f8ef7;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <model-viewer
+    id="mv"
+    src="model.glb"
+    ios-src="model.usdz"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    environment-image="https://modelviewer.dev/shared-assets/environments/neutral.hdr"
+  >
+    <button id="ar-btn" slot="ar-button">📷 Открыть в AR</button>
+  </model-viewer>
+
+</body>
+</html>
